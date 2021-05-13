@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Best Movies</title>
     <link rel="stylesheet" href="{{asset("css/app.css")}}">
+    <link rel="shortcut icon" href="{{asset("img/favicon.ico")}}" type="image/x-icon">
 </head>
 <body>
     <h1>BEST MOVIES</h1>
