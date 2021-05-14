@@ -1,25 +1,23 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Best Movies</title>
-    <link rel="stylesheet" href="{{asset("css/app.css")}}">
-    <link rel="shortcut icon" href="{{asset("img/favicon.ico")}}" type="image/x-icon">
-</head>
-<body>
+@extends('layouts.main')
+
+@section('content')
+
     <h1>BEST MOVIES</h1>
-    
+
+    <div class="container">
         @foreach ($movies as $movie)
-        <h2>Title: {{$movie->title}}</h2>
-        <h3>Director: {{$movie->director}}</h3>
-        <p>Genre: {{$movie->genre}}</p>
-        <p>Synopsis: {{$movie->synopsis}}</p>
-        <a href={{route("movies.show", ['movie'=> $movie->id])}}>_Go to Movie Details_</a>
+        <div class="card">
+            <a href={{route("movies.show", ['movie'=> $movie->id])}}><img class="cover" src={{$movie->img}} alt="Copertina di {{$movie->title}}"></a>
+            <div class="card-info">
+                <h2><em>{{$movie->title}}</em></h2>
+                <h3>Director: {{$movie->director}}</h3>
+                <p><em>Genre</em>: {{$movie->genre}}</p>
+                <p><em>Synopsis</em>: {{$movie->synopsis}}</p>
+                <a href={{route("movies.show", ['movie'=> $movie->id])}}><strong><em>Go to Movie Details</em></strong></a>
+            </div>
+        </div>
         @endforeach
-        
-    
-</body>
-</html>
+    </div>
+
+@endsection
