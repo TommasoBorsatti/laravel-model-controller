@@ -18,4 +18,3 @@ Route::resource('movies', 'MovieController');
 
 Route::get('/', 'MovieController@index');
 
-Route::get('/movie/{id}', 'MovieController@show');

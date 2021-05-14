@@ -17,7 +17,7 @@
         <h3>Director: {{$movie->director}}</h3>
         <p>Genre: {{$movie->genre}}</p>
         <p>Synopsis: {{$movie->synopsis}}</p>
-        <a href={{route("movies.show", ['movie', $movie->id])}}>_Go to Movie Details_</a>
+        <a href={{route("movies.show", ['movie'=> $movie->id])}}>_Go to Movie Details_</a>
         @endforeach
         
     
