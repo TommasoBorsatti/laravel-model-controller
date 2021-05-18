@@ -62,19 +62,6 @@ class MovieController extends Controller
 
         $movieNew = Movie::create($data);
 
-        // $movieNew = new Movie();
-        // $movieNew->title = $data['title'];
-        // $movieNew->film_director = $data['film_director'];
-        // $movieNew->genres = $data['genres'];
-        // $movieNew->plot = $data['plot'];
-        // $movieNew->year = $data['year'];
-
-        // if( !empty($data['cover_image']) ) {
-        //     $movieNew->cover_image = $data['cover_image'];
-        // }
-
-        // $movieNew->save();
-
         return redirect()->route('movies.index')->with('message', 'Il film ' . $movieNew->title . ' è stato aggiunto');
     
     }
@@ -120,8 +107,10 @@ class MovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Movie $movie)
     {
-        //
+        $movie->delete();
+
+        return redirect()->route('movies.index')->with('message', 'Il film ' . $movie->title . ' è stato eliminato');
     }
 }
