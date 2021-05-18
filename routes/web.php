@@ -18,3 +18,7 @@ Route::resource('movies', 'MovieController');
 
 Route::get('/', 'MovieController@index');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
