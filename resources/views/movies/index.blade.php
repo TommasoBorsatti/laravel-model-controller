@@ -7,7 +7,10 @@
 
 @section('content')
 
-<table class="table">
+<table class="table table-striped">
+    <div class="text-right mb-3">
+        <button type='button' class='btn btn-success text-right'>Aggiungi un Film</button>
+    </div>
     <thead>
         <tr>
             <th>Immagine</th>

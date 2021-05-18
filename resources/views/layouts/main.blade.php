@@ -12,7 +12,7 @@
 
 <body>
     <main>
-        <div class="container">
+        <div class="container mt-3">
             <h1>@yield('pageTitle')</h1>
             @yield('content')
         </div>        
