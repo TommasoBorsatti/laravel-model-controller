@@ -84,9 +84,9 @@ class MovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Movie $movie)
     {
-
+        return view('movies.edit', ['movie' => $movie]);
     }
 
     /**
@@ -96,10 +96,21 @@ class MovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Movie $movie)
     {
-        //
+        $data = $request->all();
+
+        if ( $data['cover'] === NULL ) {
+            unset($data['cover']);
+        }
+
+        $request->validate($this->requestValidation);
+
+        $movie->update( $data );
+
+        return redirect()->route('movies.show', $movie);
     }
+    
 
     /**
      * Remove the specified resource from storage.
