@@ -13,6 +13,7 @@
     </div>
     <thead>
         <tr>
+            <th>ID</th>
             <th>Immagine</th>
             <th scope="col">Titolo</th>
             <th scope="col">Regista</th>
@@ -24,6 +25,7 @@
     <tbody>
     @foreach ($movies as $movie)
         <tr>
+            <td>{{$movie->id}}</td>
             <td><img src="{{$movie->cover}}" alt="{{$movie->title}}"</td>
             <td>{{$movie->title}}</td>
             <td>{{$movie->director}}</td>
