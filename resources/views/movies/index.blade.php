@@ -35,7 +35,7 @@
 				<form action="{{route('movies.destroy', [ 'movie' => $movie->id ])}}" method="POST">
                     @csrf
 					@method('DELETE')
-					<button type="submit" class="btn btn-danger mt-4">Elimina</button>
+					<button type="submit" class="btn btn-danger mt-4 delete-btn">Elimina</button>
 				</form>
             </td>
         </tr>        
