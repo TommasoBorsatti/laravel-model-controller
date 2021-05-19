@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <img class="mb-3" src="{{$movie->cover}}" alt={{$movie->title}}>
+    <img class="mb-3 cover" src="{{$movie->cover}}" alt={{$movie->title}}>
     <h2>{{$movie->director}}</h2>
 	<h2>{{$movie->year}}</h2>
 	<p class="text-justify">{{$movie->plot}}</p>

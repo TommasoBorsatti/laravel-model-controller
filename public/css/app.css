@@ -10002,7 +10002,7 @@ h3 {
     border-color: #dee2e6;
   }
 }
-img {
+img.cover {
   width: 400px;
 }
 
@@ -10018,7 +10018,6 @@ img {
   position: absolute;
   top: 30px;
   right: 50%;
-  transform: translate(0, -50%);
   opacity: 0;
   transition: opacity 4s;
 }
