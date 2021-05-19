@@ -24,7 +24,7 @@
     <tbody>
     @foreach ($movies as $movie)
         <tr>
-            <td><img src="{{$movie->cover}}" alt="{{$movie->title}}" style="width: 100px"></td>
+            <td><img src="{{$movie->cover}}" alt="{{$movie->title}}"</td>
             <td>{{$movie->title}}</td>
             <td>{{$movie->director}}</td>
             <td>{{$movie->genres}}</td>
@@ -43,7 +43,7 @@
     </tbody>
 </table>
 @if (session('message'))
-    <div class="alert alert-success" style="position: fixed; bottom: 30px; right: 30px">
+    <div class="alert alert-success pop-up">
         {{ session('message') }}
     </div>
 @endif

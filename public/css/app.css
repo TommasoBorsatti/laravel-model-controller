@@ -10009,3 +10009,20 @@ img {
 .delete-btn {
   width: 190px;
 }
+
+img {
+  width: 100px;
+}
+
+.pop-up {
+  position: absolute;
+  top: 30px;
+  right: 50%;
+  transform: translate(0, -50%);
+  opacity: 0;
+  transition: opacity 4s;
+}
+
+.container {
+  position: relative;
+}
